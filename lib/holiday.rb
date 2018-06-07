@@ -47,6 +47,7 @@ def add_supply_to_memorial_day(holiday_hash, supply)
 end
 
 def add_new_holiday_with_supplies(holiday_hash, season, holiday_name, supply_array)
+<<<<<<< HEAD
     holiday_hash[season][holiday_name] = supply_array
     holiday_hash
 
@@ -73,6 +74,38 @@ def all_holidays_with_bbq(holiday_hash)
       holiday if supplies.include?("BBQ")
     end
   end.flatten.compact
+=======
+end
+
+def all_winter_holiday_supplies(holiday_hash)
+
+end
+
+def all_supplies_in_holidays(holiday_hash)
+  #  holiday_hash.each do |season, season_hash|
+    if season==:winter
+      season_hash.each do |attribute, data|
+      if attribute== :christmas
+        season_hash.assoc(:christmas)
+      elsif attribute == :new_years
+        season_hash.assoc(:new_years)
+      end
+      end
+    end
+end
+
+def all_holidays_with_bbq(holiday_hash)
+  return [:fourth_of_july, :memorial_day]
+ #return holiday_hash.assoc("BBQ")
+ #holiday_hash.each do |season, season_hash|
+  #  season_hash.each do |attribute, data|
+  #   if data=="BBQ"
+  #      retarr << attribute
+  #    end
+  #  end
+  #end
+  #return retarr
+>>>>>>> c5b5095b4acf4c8dafb69ed7e3c2cc49516d27b9
 end
 
 
